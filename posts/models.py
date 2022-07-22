@@ -4,21 +4,21 @@ from django.db import models
 from accounts.models import CustomUser
 
 TRANSPORTATION_CHOICE = (
-    ('metro','Metro'),
-    ('auto', 'Auto'),
-    ('camioneta','Camioneta'),
-    ('motocicleta','Motocicleta'),
-    ('bus-transantiago','Bus Transantiago'),
-    ('bus','Bus'),
-    ('avion-nacional','Avión (Nacional)'),
-    ('avion-internacional','Avión (Internacional)'),
-    ('caminando','Caminando'),
+    ('Metro','Metro'),
+    ('Auto', 'Auto'),
+    ('Camioneta','Camioneta'),
+    ('Motocicleta','Motocicleta'),
+    ('Bus Transantiago','Bus Transantiago'),
+    ('Bus','Bus'),
+    ('Avión Nacional','Avión (Nacional)'),
+    ('Avión Internacional','Avión (Internacional)'),
+    ('Caminando','Caminando'),
 )
 
 ROUNDTRIP_CHOICE = (
-    ('ida', 'Ida'),
-    ('vuelta', 'Vuelta'),
-    ('ida-vuelta', 'Ida y Vuelta'),
+    ('Ida', 'Ida'),
+    ('Vuelta', 'Vuelta'),
+    ('Ida y Vuelta', 'Ida y Vuelta'),
 )
 
 class Post(models.Model):

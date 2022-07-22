@@ -64,10 +64,11 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 # CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:3000',
+#     'http://127.0.0.1:5173',
 #     'http://localhost:8000',
 # )
 
@@ -79,6 +80,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'huella_carbono_project.urls'
@@ -102,6 +105,8 @@ TEMPLATES = [
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_ID= 1
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 WSGI_APPLICATION = 'huella_carbono_project.wsgi.application'
 
